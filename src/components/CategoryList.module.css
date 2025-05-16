@@ -1,0 +1,30 @@
+/* src/components/CategoryList.module.css */
+.wrapper {
+    display: flex;
+    gap: 1rem;
+    background: #fff;
+    padding: 0.5rem;
+    position: sticky;
+    top: 4rem; /* под шапкой */
+    z-index: 50;
+    overflow-x: auto;
+}
+
+.button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    transition: color 0.2s, border-bottom 0.2s;
+    color: #555;
+}
+
+.button:hover {
+    color: #007bff;
+}
+
+.active {
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+}
