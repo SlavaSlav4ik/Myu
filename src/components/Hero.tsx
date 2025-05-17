@@ -1,6 +1,6 @@
 // src/components/Hero.tsx
 import React from 'react';
-import burgerImg from '../assets/burger.png';
+import burgerImg from '../../assets/burger.svg';
 import styles from './Hero.module.css';
 
 const Hero: React.FC = () => (

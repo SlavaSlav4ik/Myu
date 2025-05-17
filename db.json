@@ -1,9 +1,12 @@
 {
   "products": [
-    { "id": 1, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "https://via.placeholder.com/150" },
-    { "id": 2, "name": "Бургер BBQ", "price": 300, "delivery": false, "img": "https://via.placeholder.com/150" }
+    { "id": 1, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 2, "name": "Бургер BBQ", "price": 300, "delivery": false, "img": "/assets/burger.svg" },
+    { "id": 3, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 4, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 5, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" }
   ],
   "categories": [
-    { "id": 1, "name": "Бургеры", "products": [1,2] }
+    { "id": 1, "name": "Бургеры", "products": [1,2,3,4,5] }
   ]
 }

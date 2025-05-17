@@ -1,1 +1,49 @@
-// Placeholder for index.css
+/* Убрал отступы и поля по умолчанию */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Основные настройки для body */
+html, body {
+    height: 100%;
+    font-family: PT Serif, serif;
+    background: #fafafa;
+    color: #333;
+}
+
+/* Ссылка без подчеркивания по умолчанию */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Контейнер-утилита для центровки контента */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Сброс списка */
+ul {
+    list-style: none;
+}
+
+/* Кнопки по умолчанию */
+button {
+    font: inherit;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Картинка встраиваем как блочный элемент */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

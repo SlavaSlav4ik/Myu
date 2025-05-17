@@ -1,7 +1,7 @@
-// src/components/CategorySection.tsx
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { RootState } from '../store/store';
+import React, { useEffect, useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchProducts } from '../features/products/productsSlice';
+import type { RootState, AppDispatch } from '../store/store';
 import ProductCard from './ProductCard';
 import styles from './CategorySection.module.css';
 
@@ -12,19 +12,23 @@ interface Props {
 }
 
 const CategorySection: React.FC<Props> = ({ id, name, productIds }) => {
-    const allProducts = useSelector((state: RootState) => state.products.items);
-    const mode = useSelector((state: RootState) => state.cart.deliveryMode);
+    const dispatch = useDispatch<AppDispatch>();
+    const { items, status } = useSelector((s: RootState) => s.products);
+    const mode = useSelector((s: RootState) => s.cart.deliveryMode);
 
-    const products = allProducts.filter(p => productIds.includes(p.id));
-    const filtered = products.filter(p =>
-        mode === 'pickup' ? true : p.delivery
-    );
+    useEffect(() => {
+        if (status === 'idle') dispatch(fetchProducts());
+    }, [dispatch, status]);
+
+    const products = items
+        .filter(p => productIds.includes(p.id))
+        .filter(p => (mode === 'pickup' ? true : p.delivery));
 
     return (
         <section id={`category-${id}`} className={styles.section}>
             <h2 className={styles.title}>{name}</h2>
             <div className={styles.grid}>
-                {filtered.map(prod => (
+                {products.map(prod => (
                     <ProductCard key={prod.id} product={prod} />
                 ))}
             </div>

@@ -1,5 +1,3 @@
-/* src/components/CategorySection.module.css */
-
 .section {
     margin: 3rem 0;
 }
@@ -7,18 +5,16 @@
 .title {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 1.5rem;
     color: #171717;
+    margin-bottom: 1.5rem;
 }
 
-/* Сетка карточек */
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
-/* Адаптив */
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);

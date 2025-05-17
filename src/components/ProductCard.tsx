@@ -1,39 +1,42 @@
 // src/components/ProductCard.tsx
-import React from "react";
-import styles from "./ProductCard.module.css";
-import { useDispatch } from "react-redux";
-import {addToCart} from "../features/cart/cartSlice";
-
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../features/cart/cartSlice';
+import type { Product } from '../types';
+import type { AppDispatch } from '../store/store';
+import styles from './ProductCard.module.css';
 
 interface Props {
-    product: {
-        id: number;
-        name: string;
-        price: number;
-        image: string;
-        delivery: boolean;
-    };
+    product: Product;
 }
 
-const  ProductCard: React.FC<Props> = ({ product }) => {
-    const dispatch = useDispatch();
-
-    const handleClick = () => {
-        dispatch(addToCart(product));
-    };
+const ProductCard: React.FC<Props> = ({ product }) => {
+    const dispatch = useDispatch<AppDispatch>();
 
     return (
         <div className={styles.card}>
+            {/* Картинка из поля product.img */}
             <div className={styles.imageWrapper}>
-                <img src={product.image} alt={product.name} className={styles.image} />
+                <img
+                    src={product.img}
+                    alt={product.name}
+                    className={styles.image}
+                    loading="lazy"
+                />
                 {!product.delivery && (
-                    <span className={styles.noDelivery}>Нет доставки</span>
+                    <span className={styles.noDelivery}>Только самовывоз</span>
                 )}
             </div>
+
+            {/* Информация */}
             <div className={styles.info}>
                 <h3 className={styles.title}>{product.name}</h3>
-                <div className={styles.price}>{product.price} ₽</div>
-                <button className={styles.button} onClick={handleClick}>
+                <p className={styles.price}>{product.price} ₽</p>
+                <button
+                    className={styles.button}
+                    onClick={() => dispatch(addToCart(product))}
+                    disabled={!product.delivery}
+                >
                     Добавить
                 </button>
             </div>
