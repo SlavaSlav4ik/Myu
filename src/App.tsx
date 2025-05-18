@@ -3,9 +3,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Home from './pages/Home';
-import Cart from './features/cart/Cart';  // ваш компонент корзины
-// import About from './pages/About';     // при желании добавьте
-// import Contact from './pages/Contact';
+import Cart from './features/cart/Cart';
+import Footer from "./components/Footer";
+
+
 
 const App: React.FC = () => (
     <Router>
@@ -20,8 +21,10 @@ const App: React.FC = () => (
                 {/* <Route path="/about" element={<About />} /> */}
                 {/* <Route path="/contact" element={<Contact />} /> */}
                 <Route path="*" element={<Home />} />
-            </Routes>
+                </Routes>
         </main>
+        <Footer />
+
     </Router>
 );
 

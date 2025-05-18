@@ -6,13 +6,15 @@
     font-size: 2rem;
     font-weight: 700;
     color: #171717;
+    margin-left: 3rem;
     margin-bottom: 1.5rem;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    /*gap: 2rem;*/
 }
 
 @media (max-width: 1024px) {

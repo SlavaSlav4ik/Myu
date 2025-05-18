@@ -4,9 +4,26 @@
     { "id": 2, "name": "Бургер BBQ", "price": 300, "delivery": false, "img": "/assets/burger.svg" },
     { "id": 3, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
     { "id": 4, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 5, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" }
+    { "id": 6, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 7, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 8, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 9, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 10, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 11, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 12, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 13, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" }
+
+
+
   ],
   "categories": [
-    { "id": 1, "name": "Бургеры", "products": [1,2,3,4,5] }
+    { "id": 1, "name": "Бургеры", "products": [1,2,3,4,5] },
+    { "id": 2, "name": "Роллы", "products": [6,7,8,9] },
+    { "id": 3, "name": "Курица", "products": [10,11,12,13] },
+    { "id": 4, "name": "Соусы", "products": [10,11,12,13] },
+    { "id": 5, "name": "Картошка", "products": [10,11,12,13] },
+    { "id": 6, "name": "Закуски", "products": [10,11,12,13] },
+    { "id": 7, "name": "Напитки", "products": [10,11,12,13] },
+    { "id": 8, "name": "Десерты", "products": [10,11,12,13] }
   ]
 }

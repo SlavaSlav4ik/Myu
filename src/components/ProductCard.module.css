@@ -1,6 +1,9 @@
+/* src/components/ProductCard.module.css */
 .card {
     display: flex;
     flex-direction: column;
+    width: 290px;         /* фиксированная ширина */
+    height: 360px;        /* фиксированная высота */
     border: 1px solid #e5e5e5;
     border-radius: 8px;
     overflow: hidden;
@@ -16,7 +19,7 @@
 .imageWrapper {
     position: relative;
     width: 100%;
-    height: 200px;
+    height: 180px;      /* полкарточки под картинку */
     overflow: hidden;
 }
 
@@ -38,28 +41,28 @@
 }
 
 .info {
-    padding: 16px;
-    flex-grow: 1;
+    flex: 1;            /* оставшееся пространство под контент */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 16px;
 }
 
 .title {
     font-size: 1.125rem;
     font-weight: 600;
-    margin: 0 0 8px;
     color: #171717;
+    margin-bottom: 8px;
 }
 
 .price {
     font-size: 1rem;
     font-weight: 500;
     color: #333;
-    margin-bottom: 16px;
 }
 
 .button {
+    margin-top: 12px;
     align-self: flex-start;
     background-color: #c9a96e;
     color: #fff;
@@ -80,10 +83,14 @@
     cursor: not-allowed;
 }
 
-/* Адаптив для мобильных */
+/* Адаптив: на мобилках карточка во всю ширину контейнера, сохраняя пропорции */
 @media (max-width: 768px) {
+    .card {
+        width: 100%;       /* растягиваем под родительский контейнер */
+        height: auto;      /* пусть высота подстраивается */
+    }
     .imageWrapper {
-        height: 180px;
+        height: 200px;     /* чуть выше, чтобы визуально сбалансировать */
     }
     .info {
         padding: 12px;
