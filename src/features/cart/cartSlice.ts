@@ -1,4 +1,3 @@
-// src/features/cart/cartSlice.ts
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { Product } from '../../types';
 
@@ -59,7 +58,7 @@ export const {
     increaseQuantity,
     decreaseQuantity,
     clearCart,
-    setMode,             // <-- экшен для переключения режима
+    setMode,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

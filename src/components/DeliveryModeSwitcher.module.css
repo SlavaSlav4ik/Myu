@@ -41,7 +41,7 @@
 .switcher .button:nth-child(3)[style*="left: 50%"] + .button {
 }
 
-/* ховер */
+/* хонер */
 .button:hover {
     color: #000;
 }

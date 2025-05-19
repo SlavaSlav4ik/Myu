@@ -1,3 +1,6 @@
+
+
+/* Мобильный: 1 колонка */
 .page {
     display: grid;
     gap: 2rem;
@@ -6,3 +9,9 @@
     padding: 1rem;
 }
 
+/* Планшет: контент + корзина */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .page {
+        grid-template-columns: 2fr 1fr;
+    }
+}
