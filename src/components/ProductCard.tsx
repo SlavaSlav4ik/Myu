@@ -1,9 +1,9 @@
 // src/components/ProductCard.tsx
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { addToCart } from '../features/cart/cartSlice';
+import {useDispatch, useSelector} from 'react-redux';
+import {addToCart, decreaseQuantity, increaseQuantity} from '../features/cart/cartSlice';
 import type { Product } from '../types';
-import type { AppDispatch } from '../store/store';
+import type {AppDispatch, RootState} from '../store/store';
 import styles from './ProductCard.module.css';
 
 interface Props {
@@ -12,6 +12,11 @@ interface Props {
 
 const ProductCard: React.FC<Props> = ({ product }) => {
     const dispatch = useDispatch<AppDispatch>();
+    const cartItem = useSelector((s: RootState) =>
+        s.cart.items.find(i => i.id === product.id)
+    );
+    const quantity = cartItem?.quantity ?? 0;
+
 
     return (
         <div className={styles.card}>
@@ -32,13 +37,18 @@ const ProductCard: React.FC<Props> = ({ product }) => {
             <div className={styles.info}>
                 <h3 className={styles.title}>{product.name}</h3>
                 <p className={styles.price}>{product.price} ₽</p>
-                <button
-                    className={styles.button}
-                    onClick={() => dispatch(addToCart(product))}
-                    disabled={!product.delivery}
-                >
-                    Добавить
-                </button>
+                {quantity === 0 ? (
+                    <button className={styles.button} onClick={() => dispatch(addToCart(product))}>
+                        Добавить
+                    </button>
+                ) : (
+                    <div className={styles.qtyControls}>
+                        <button onClick={() => dispatch(decreaseQuantity(product.id))}>−</button>
+                        <span>{quantity}</span>
+                        <button onClick={() => dispatch(increaseQuantity(product.id))}>+</button>
+                    </div>
+                )}
+
             </div>
         </div>
     );

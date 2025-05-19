@@ -14,7 +14,8 @@
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(4, 1fr);
-    /*gap: 2rem;*/
+    width: 75rem;
+    gap: 2rem
 }
 
 @media (max-width: 1024px) {

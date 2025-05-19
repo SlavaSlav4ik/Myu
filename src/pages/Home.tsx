@@ -6,6 +6,8 @@ import CategorySection from '../components/CategorySection';
 import type { AppDispatch, RootState } from '../store/store';
 import { useDispatch, useSelector } from 'react-redux';
 import {loadCategories} from "../features/products/categoriesSlice";
+import styles from './Home.module.css';
+
 
 const Home: React.FC = () => {
     const dispatch = useDispatch<AppDispatch>();
@@ -17,7 +19,7 @@ const Home: React.FC = () => {
     }, [dispatch, catStatus]);
 
     return (
-        <>
+        <div className={styles.page}>
             <DeliveryModeSwitcher />
             <CategoryList />
             <div style={{ padding: '1rem' }}>
@@ -30,7 +32,7 @@ const Home: React.FC = () => {
                     />
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 

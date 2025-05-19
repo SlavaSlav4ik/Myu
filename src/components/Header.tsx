@@ -13,15 +13,15 @@ const Header: React.FC = () => {
     return (
         <header className={styles.appHeader}>
             <div className={styles.container}>
-                {/* Логотип, меню и т.д. */}
+                {/* здесь твой логотип, меню и т.д. */}
                 <nav className={styles.navLinks}>
-                    <Link to="/" className={styles.navLink}>Home</Link>
-                    <Link to="/menu" className={styles.navLink}>Menu</Link>
-                    <Link to="/about" className={styles.navLink}>About</Link>
-                    <Link to="/contact" className={styles.navLink}>Contact</Link>
+                    <Link to="/" className={styles.navLink}>Меню</Link>
+                    <Link to="/menu" className={styles.navLink}>Купоны</Link>
+                    <Link to="/about" className={styles.navLink}>О нас</Link>
+                    <Link to="/contact" className={styles.navLink}>Контакты</Link>
                 </nav>
 
-                {/* Прямо здесь корзина */}
+
                 <div className={styles.cartWrapper}>
                     <Link to="/cart" className={styles.cartLink}>
                         Корзина ({cartCount})

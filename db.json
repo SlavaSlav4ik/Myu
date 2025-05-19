@@ -1,17 +1,40 @@
 {
   "products": [
-    { "id": 1, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 2, "name": "Бургер BBQ", "price": 300, "delivery": false, "img": "/assets/burger.svg" },
-    { "id": 3, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 4, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 6, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 7, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 8, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 9, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 10, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 11, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 12, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" },
-    { "id": 13, "name": "Чизбургер", "price": 250, "delivery": true,  "img": "/assets/burger.svg" }
+    { "id": 1, "name": "Чизбургер", "price": 450, "delivery": true,  "img": "/assets/burger.svg" },
+    { "id": 2, "name": "Бургер BBQ", "price": 300, "delivery": false, "img": "/assets/burgerBBQ.jpg" },
+    { "id": 3, "name": "Гамбургер", "price": 250, "delivery": true,  "img": "/assets/burgerA.jpg" },
+    { "id": 4, "name": "Двойной воппер", "price": 700, "delivery": true,  "img": "/assets/tooBurger.jpg" },
+    { "id": 6, "name": "Терияки Ролл с креветками", "price": 450, "delivery": false,  "img": "/assets/roll/rollFish.jpg" },
+    { "id": 7, "name": "Мега Ролл Оригинальный", "price": 150, "delivery": true,  "img": "/assets/roll/rollDUBL.jpg" },
+    { "id": 8, "name": "Ай-Ролл", "price": 340, "delivery": true,  "img": "/assets/roll/rollOne.jpg" },
+    { "id": 9, "name": "Ролл-Russ", "price": 250, "delivery": false,  "img": "/assets/roll/rollRUSS.png" },
+    { "id": 10, "name": "Домашний Баскет", "price": 290, "delivery": true,  "img": "/assets/chicken/chickenBox.jpg" },
+    { "id": 11, "name": "Стрипсы Оригинальные", "price": 400, "delivery": false,  "img": "/assets/chicken/chickenLeg.jpg" },
+    { "id": 12, "name": "Крылышки", "price": 200, "delivery": true,  "img": "/assets/chicken/chickenMini.png" },
+    { "id": 13, "name": "Ножки Оригинальные", "price": 250, "delivery": true,  "img": "/assets/chicken/chickenNG.jpg" },
+    { "id": 14, "name": "Соус Кетчуп", "price": 100, "delivery": true,  "img": "/assets/sauce/sauceFW.png" },
+    { "id": 15, "name": "Соус Горчица", "price": 330, "delivery": false,  "img": "/assets/sauce/sauceGH.png" },
+    { "id": 16, "name": "Соус Терияки", "price": 200, "delivery": true,  "img": "/assets/sauce/sauceMW.png" },
+    { "id": 17, "name": "Соус Тартар", "price": 400, "delivery": true,  "img": "/assets/sauce/sauceML.png" },
+    { "id": 18, "name": "Кортошка Фри", "price": 240, "delivery": false,  "img": "/assets/potato/potatoBox.jpg" },
+    { "id": 18, "name": "Роял Фри По-испански", "price": 250, "delivery": true,  "img": "/assets/potato/potatoBoxXX.jpg" },
+    { "id": 18, "name": "Кортошка По-деревенски", "price": 355, "delivery": true,  "img": "/assets/potato/potatoVL.jpg" },
+    { "id": 21, "name": "Кортошка Фри По-французски", "price": 120, "delivery": true,  "img": "/assets/potato/potatoHO.jpg" },
+    { "id": 22, "name": "Коттачино", "price": 250, "delivery": true,  "img": "/assets/snacks/snacksKofKIT.jpg" },
+    { "id": 23, "name": "Беш-Коты", "price": 400, "delivery": false,  "img": "/assets/snacks/snacksKIT.jpg" },
+    { "id": 24, "name": "Овсяная каша", "price": 350, "delivery": true,  "img": "/assets/snacks/snacksQL.jpg" },
+    { "id": 25, "name": "Кофейный тирамису", "price": 150, "delivery": true,  "img": "/assets/snacks/snacksKakaO.jpg" },
+    { "id": 26, "name": "Банановый латте", "price": 340, "delivery": true,  "img": "/assets/drinks/drinksKF.jpg" },
+    { "id": 27, "name": "Молочный коктель", "price": 220, "delivery": false,  "img": "/assets/drinks/drinksMLK.jpg" },
+    { "id": 28, "name": "Красный чай с смородиной", "price": 300, "delivery": false,  "img": "/assets/drinks/drinksMORS.jpg" },
+    { "id": 29, "name": "Сок апельсиновый", "price": 400, "delivery": true,  "img": "/assets/drinks/drinksSOK.png" },
+    { "id": 30, "name": "Творожник", "price": 320, "delivery": true,  "img": "/assets/desserts/dessertsCHSK.png" },
+    { "id": 31, "name": "Творожник с клубникой", "price": 250, "delivery": false,  "img": "/assets/desserts/dessertsHO.jpg" },
+    { "id": 32, "name": "Пирожное Королева", "price": 400, "delivery": true,  "img": "/assets/desserts/dessertsTGK.jpg" },
+    { "id": 33, "name": "Слоеные рулеты", "price": 550, "delivery": true,  "img": "/assets/desserts/dessertsUO.jpg" }
+
+
+
 
 
 
@@ -20,10 +43,10 @@
     { "id": 1, "name": "Бургеры", "products": [1,2,3,4,5] },
     { "id": 2, "name": "Роллы", "products": [6,7,8,9] },
     { "id": 3, "name": "Курица", "products": [10,11,12,13] },
-    { "id": 4, "name": "Соусы", "products": [10,11,12,13] },
-    { "id": 5, "name": "Картошка", "products": [10,11,12,13] },
-    { "id": 6, "name": "Закуски", "products": [10,11,12,13] },
-    { "id": 7, "name": "Напитки", "products": [10,11,12,13] },
-    { "id": 8, "name": "Десерты", "products": [10,11,12,13] }
+    { "id": 4, "name": "Соусы", "products": [14,15,16,17] },
+    { "id": 5, "name": "Картошка", "products": [18,19,20,21] },
+    { "id": 6, "name": "Закуски", "products": [22,23,24,25] },
+    { "id": 7, "name": "Напитки", "products": [26,27,28,29] },
+    { "id": 8, "name": "Десерты", "products": [30,31,32,33] }
   ]
 }

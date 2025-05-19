@@ -1,0 +1,140 @@
+/* Контейнер корзины */
+.cart {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+
+.cart_main {
+
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 1.5rem;
+    max-width: 320px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Заголовок */
+.header {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #171717;
+}
+
+/* Список товаров */
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Элемент товара */
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+/* Название и количество */
+.info {
+    flex: 1;
+}
+
+/* Название */
+.name {
+    font-weight: 500;
+    color: #333;
+}
+
+/* Цена и количество */
+.priceQty {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 0.25rem;
+}
+
+/* Контейнер кнопок управления */
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+/* Общий стиль кнопок */
+.button {
+    background: #c9a96e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.button:hover:not(:disabled) {
+    background: #b08f5a;
+}
+
+.button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Итоговая сумма */
+.total {
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: right;
+    color: #171717;
+}
+
+/* Блок адреса доставки */
+.address {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Поля ввода */
+.input {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Ошибка */
+.error {
+    color: #c0392b;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* Кнопка оформления */
+.checkoutBtn {
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.75rem;
+    background: #171717;
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.checkoutBtn:hover:not(:disabled) {
+    background: #333;
+}

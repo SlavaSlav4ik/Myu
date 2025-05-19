@@ -1,0 +1,47 @@
+/* контейнер-обёртка */
+.switcher {
+    position: relative;
+    max-width: 15rem;
+    display: inline-flex;
+    background: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0; /* сброс межкнопочного пространства */
+}
+
+/* «ползунок» */
+.slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #c9a96e;
+    transition: left 0.3s ease;
+    top: 0;
+    left: 0; /* сместится на 50% по клику */
+    z-index: 0;
+}
+
+/* общие стили для кнопок */
+.button {
+    position: relative;
+    z-index: 1; /* над ползунком */
+    flex: 1 1 50%;
+    padding: 0.5rem 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.2s ease;
+}
+
+/* активный текст кнопки */
+.switcher .button:nth-child(2)[style*="left: 0%"] + .button,
+.switcher .button:nth-child(3)[style*="left: 50%"] + .button {
+}
+
+/* ховер */
+.button:hover {
+    color: #000;
+}

@@ -1,11 +1,11 @@
-/* src/components/CategoryList.module.css */
+
 .wrapper {
     display: flex;
     gap: 1rem;
     background: #fff;
     padding: 0.5rem;
     position: sticky;
-    top: 4rem; /* под шапкой */
+    top: 4rem;
     z-index: 50;
     overflow-x: auto;
 }

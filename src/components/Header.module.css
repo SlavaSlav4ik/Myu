@@ -1,9 +1,9 @@
 /* src/components/Header.module.css */
 
-/* Сам хэдер — НЕ делаем sticky, только корзину */
 .appHeader {
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* убрали sticky здесь */
     z-index: 100;
 }
 
@@ -11,26 +11,9 @@
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: flex-start; /* меняем на flex-start, чтобы sticky работал */
+    align-items: flex-start;    /* важно: sticky работает только при flex-start */
     justify-content: space-between;
     padding: 0.5rem 1rem;
-}
-
-.logoLink {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.logo {
-    width: 40px;
-    height: 40px;
-}
-
-.title {
-    margin-left: 0.5rem;
-    font-size: 1.5rem;
-    color: #333;
 }
 
 .navLinks {
@@ -41,22 +24,21 @@
 .navLink {
     text-decoration: none;
     color: #555;
-    font-weight: 500;
 }
 
 .navLink:hover {
     color: #007bff;
 }
 
-/* Обёртка для корзины */
+/* Обёртка для ссылки «Корзина» */
 .cartWrapper {
     position: sticky;
-    top: 0;              /* прилипает вплотную к верху */
-    align-self: flex-start; /* в рамках flex-контейнера */
-    z-index: 101;
+    top: 0;                /* прилипает к самому верху экрана */
+    align-self: flex-start;
+    z-index: 101;          /* чуть выше, чем у .appHeader */
 }
 
-/* Сама ссылка-кнопка */
+/* Сама ссылка */
 .cartLink {
     text-decoration: none;
     color: #007bff;

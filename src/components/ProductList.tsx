@@ -7,7 +7,6 @@ import ProductCard from './ProductCard';
 import styles from './ProductList.module.css';
 
 const ProductList: React.FC = () => {
-    // теперь state у useSelector — известного типа
     const products = useSelector((state: RootState) => state.products.items);
 
     return (
