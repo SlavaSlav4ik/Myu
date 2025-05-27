@@ -19,7 +19,6 @@ const ProductCard: React.FC<Props> = ({ product }) => {
 
     return (
         <div className={styles.card}>
-            {/* Картинка из поля product.img */}
             <div className={styles.imageWrapper}>
                 <img
                     src={product.img}
@@ -32,7 +31,6 @@ const ProductCard: React.FC<Props> = ({ product }) => {
                 )}
             </div>
 
-            {/* Информация */}
             <div className={styles.info}>
                 <h3 className={styles.title}>{product.name}</h3>
                 <p className={styles.price}>{product.price} ₽</p>
@@ -42,15 +40,26 @@ const ProductCard: React.FC<Props> = ({ product }) => {
                     </button>
                 ) : (
                     <div className={styles.qtyControls}>
-                        <button onClick={() => dispatch(decreaseQuantity(product.id))}>−</button>
-                        <span>{quantity}</span>
-                        <button onClick={() => dispatch(increaseQuantity(product.id))}>+</button>
+                        <button
+                            className={styles.qtyBtn}
+                            onClick={() => dispatch(decreaseQuantity(product.id))}
+                            disabled={quantity <= 1}
+                        >
+                            −
+                        </button>
+                        <div className={styles.qtyInner}>
+                            <span className={styles.qtyValue}>{quantity}</span>
+                        </div>
+                        <button
+                            className={styles.qtyBtn}
+                            onClick={() => dispatch(increaseQuantity(product.id))}
+                        >
+                            +
+                        </button>
                     </div>
                 )}
-
             </div>
         </div>
-    );
-};
+    );};
 
 export default ProductCard;
