@@ -11,6 +11,6 @@ export const store = configureStore({
     },
 });
 
-// 👇 Правильная сигнатура RootState:
+
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
